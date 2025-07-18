@@ -47,7 +47,7 @@ export function CreateRoom() {
         </div>
       </div>
       <div className="mx-auto max-w-4xl px-4 py-20">
-        <div className="grid grid-cols-2 items-start gap-8">
+        <div className="grid grid-cols-1 items-start gap-8 sm:grid-cols-2">
           <CreateRoomForm />
           <RoomList />
         </div>
