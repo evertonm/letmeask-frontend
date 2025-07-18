@@ -7,7 +7,7 @@ export function useRooms() {
     queryKey: ['get-rooms'],
     queryFn: async () => {
       const response = await fetchWithInterceptor(
-        'http://localhost:3333/rooms'
+        'https://letmeask-backend-production.up.railway.app/rooms'
       );
       const result: GetRoomsResponse = await response.json();
       return result;

@@ -7,7 +7,7 @@ export function useRoomQuestions(roomId: string) {
     queryKey: ['get-questions', roomId],
     queryFn: async () => {
       const response = await fetchWithInterceptor(
-        `http://localhost:3333/rooms/${roomId}/questions`
+        `https://letmeask-backend-production.up.railway.app/rooms/${roomId}/questions`
       );
       const result: GetRoomQuestionsResponse = await response.json();
       return result;

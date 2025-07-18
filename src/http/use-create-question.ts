@@ -9,7 +9,7 @@ export function useCreateQuestion(roomId: string) {
   return useMutation({
     mutationFn: async (data: CreateQuestionRequest) => {
       const response = await fetchWithInterceptor(
-        `http://localhost:3333/rooms/${roomId}/questions`,
+        `https://letmeask-backend-production.up.railway.app/rooms/${roomId}/questions`,
         {
           method: 'POST',
           headers: {

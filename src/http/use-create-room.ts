@@ -8,7 +8,7 @@ export function useCreateRoom() {
   return useMutation({
     mutationFn: async (data: CreateRoomRequest) => {
       const response = await fetchWithInterceptor(
-        'http://localhost:3333/rooms',
+        'https://letmeask-backend-production.up.railway.app/rooms',
         {
           method: 'POST',
           headers: {

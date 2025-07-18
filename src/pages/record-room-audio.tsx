@@ -36,7 +36,7 @@ export function RecordRoomAudio() {
     formData.append('file', audio, 'audio.webm');
 
     const response = await fetchWithInterceptor(
-      `http://localhost:3333/rooms/${params.roomId}/audio`,
+      `https://letmeask-backend-production.up.railway.app/rooms/${params.roomId}/audio`,
       {
         method: 'POST',
         body: formData,

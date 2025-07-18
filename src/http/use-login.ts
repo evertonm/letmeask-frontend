@@ -6,13 +6,16 @@ export function useLogin() {
   return useMutation({
     mutationFn: async (data: LoginRequest) => {
       try {
-        const response = await fetch('http://localhost:3333/users/login', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(data),
-        });
+        const response = await fetch(
+          'https://letmeask-backend-production.up.railway.app/users/login',
+          {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+          }
+        );
         if (response.status !== 200) {
           throw new Error(response.statusText);
         }
